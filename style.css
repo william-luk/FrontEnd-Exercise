@@ -1,0 +1,431 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #000000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+}
+
+#navbar {
+    position: relative;
+    z-index: 100;
+    height: auto;
+    width: 100%;
+    padding: 30px 0;
+    display: grid;
+    background-color: #000000;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+
+#navbar a {
+    margin: 0 50px;
+    color: white;
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(1.3rem, 1.3vw, 2.2rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#navClick {
+    display: none;
+    justify-content: center;
+}
+
+#showNav {
+    display: none;
+    justify-content: center;
+    margin: 0;
+}
+
+#showNav img {
+    width: 48px;
+    margin-bottom: 1.5rem;
+}
+
+#logo {
+    margin-right: 0;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+}
+
+#links a {
+    margin: 0 20px;
+}
+
+#dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#dropdown a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#search {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0;
+}
+
+#search a {}
+
+#val-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /*    padding-bottom: clamp(55rem, 5vw, 58rem);*/
+    height: 55rem;
+    width: 100%;
+    opacity: 0;
+    /*    padding-bottom: 56.25%;*/
+}
+
+#val-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: 16vw;
+    letter-spacing: -0.04em;
+    width: 100%;
+    margin-top: -3vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#val-title-1,
+#val-title-2,
+#val-title-3 {
+    padding: 0;
+    margin: 0;
+}
+
+#val-arrow {
+    width: 10rem;
+    /*    background: red;*/
+}
+
+.valImgs {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 100vw;
+    max-height: 700px;
+    padding-top: 11rem;
+}
+
+#val-team {
+    display: grid;
+    position: relative;
+    z-index: 100;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-gap: 0.5rem;
+    margin: 0 0.5rem;
+    background: #000000;
+}
+
+#val-team-header {
+    display: block;
+    position: relative;
+    opacity: 0;
+    z-index: 50;
+    text-align: center;
+    font-size: 4vw;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+#val-team-card {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 5rem 1fr;
+    width: auto;
+    height: 20rem;
+    min-width: 360px;
+    border: 1px solid #00cfff;
+}
+
+#val-team-img {
+    display: flex;
+    grid-row: 1 / span 2;
+}
+
+#val-team-img img {
+    margin: auto;
+    width: auto;
+    max-width: 330px;
+    min-width: 90px;
+    height: auto;
+}
+
+#val-team-name {
+    grid-column: 2 / span 1;
+    grid-row: 1 /span 1;
+    font-size: clamp(1.3rem, 2vw, 2.2rem);
+    text-align: center;
+    align-self: center;
+    color: #ffffff;
+}
+
+#val-team-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: 2 /span 1;
+    grid-row: 2 / span 1;
+    overflow-y: auto;
+}
+
+#val-team-desc-text {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: clamp(1.1rem, 1vw, 2.2rem);
+    white-space: pre-wrap;
+    color: #ffffff;
+}
+
+#val-team-sm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0.5rem auto;
+    align-self: flex-end;
+}
+
+.sm-icon {
+    justify-self: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 0.5rem;
+    padding: 8px;
+    background: #00cfff;
+}
+
+.sm-icon img {
+    width: 32px;
+}
+
+#val-c1 {
+    /*
+
+    left: 2%;
+    transform: translateX(-2%);
+*/
+
+    z-index: 5;
+    /*    top: 70px;*/
+
+}
+
+#val-c2 {
+    /*
+    left: 12%;
+    transform: translateX(-12%);
+*/
+    z-index: 10;
+    /*    top: 50px;*/
+}
+
+#val-c3 {
+    /*
+
+    left: 32%;
+    transform: translateX(-32%);
+*/
+    z-index: 15;
+    /*    top: 10px;*/
+}
+
+#val-c4 {
+
+    /*
+    left: 50%;
+    transform: translateX(-50%);
+*/
+    z-index: 20;
+}
+
+#val-c5 {
+    /*
+    left: 68%;
+    transform: translateX(-68%);
+*/
+    z-index: 15;
+    /*    top: 23px;*/
+}
+
+#val-c6 {
+    /*
+    left: 77%;
+    transform: translateX(-77%);
+*/
+    z-index: 10;
+    /*    top: 60px;*/
+}
+
+#val-c7 {
+    /*
+    left: 96%;
+    transform: translateX(-96%);
+*/
+    z-index: 5;
+    /*    top: 80px;*/
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 500;
+    width: 36px;
+    height: 36px;
+    border: 3px solid #00cfff;
+    border-radius: 100px;
+    background: #000000;
+    box-shadow: 0 0 5px 1px #000000;
+}
+
+#back-to-top a {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 2px;
+}
+
+@media screen and (max-width:1100px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #val-c3,
+    #val-c5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:780px) {
+    #val-header {
+        height: 35rem;
+    }
+
+    .valImgs {
+        max-height: 480px;
+        padding-top: 5rem;
+    }
+
+    #val-team {
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+
+    }
+
+    #val-c3,
+    #val-c5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:478px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #navbar {
+        display: block;
+        height: 5rem;
+        text-align: center;
+        padding: 0;
+    }
+
+
+    #navbar a {
+        margin: 0;
+    }
+
+
+    #navClick {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    #showNav {
+        display: flex;
+    }
+
+
+    #links {
+        /*        display: block;*/
+        display: none;
+    }
+
+    #links a {
+        display: block;
+        padding: 0;
+        padding: 12px 0;
+    }
+
+    #dropdown {
+        position: inherit;
+    }
+
+    #about {
+        background-color: #000000;
+        margin: 0;
+    }
+
+    #search {
+        /*        display: block;*/
+        display: none;
+        margin: 0;
+        padding: 12px 0;
+        background-color: #000000;
+    }
+
+    #val-header {
+        height: 25rem;
+    }
+
+    .valImgs {
+        padding-top: 2.5rem;
+    }
+
+    #val-team {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin: 0;
+    }
+
+    #val-c2,
+    #val-c3,
+    #val-c5,
+    #val-c7 {
+        display: none;
+    }
+}
